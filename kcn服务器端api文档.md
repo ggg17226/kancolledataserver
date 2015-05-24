@@ -118,6 +118,7 @@ salt待定
 ###返回值
 
 返回值为一个有序的json数组，每个数组为一个json，json结构如下
+
 | 参数 | 参数说明 | 类型 | 备注 | 参考 |
 | --- |:-------:|:----:|:---:|:----:|
 |point|	地点	|int|	　
@@ -219,15 +220,17 @@ salt待定
 |id|	配置id|	int|
 
 ###返回值
+
 返回值为一个json
+
 | 参数 | 参数说明 | 类型 | 备注 | 参考 |
 | --- |:-------:|:----:|:---:|:----:|
-|id|	配置id|	int|	
-|info|	配置说明|	String	|
-|time|	时间|	datetime	|2015-5-5 00:00:00|
-|fav|	点赞数|	int	|
-|config|	配置详情|	json|	已解码|
-|place|	地图	|String	|5-4 1-1|
+|id|配置id|	int|	
+|info|配置说明|	String	|
+|time|时间|	datetime	|2015-5-5 00:00:00|
+|fav|点赞数|	int	|
+|config|配置详情|	json|	已解码|
+|place|地图|String	|5-4 1-1|
 |dislike|砸鸡蛋数|int|
  
 ----------
