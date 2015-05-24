@@ -57,6 +57,7 @@
 | --- |:-------:|:----:|:---:|:----:|
 |guestinfo|客户端信息|String|必须，主机名、系统类型、系统架构、操作系统版本号，以上信息均以半角括号括起，然后将其连接起来|os.hostname() os.type() os.arch() os.release()|
 |secret|加密验证|String|将guestinfo中的几条数据以salt连接，计算sha1|主机名salt系统类型salt…………|
+|check|验证码|String|
 
 salt待定
 
