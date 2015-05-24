@@ -71,6 +71,7 @@
 |user|用户名|String|
 |passwd|密码|String|发送sha1加密后的密码|
 |email|邮箱|String|
+|check|验证码|String|
 
 
 
