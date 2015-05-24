@@ -50,6 +50,9 @@
 
 ##匿名用户获取授权码（https）
 
+地址：/index.php/api/user/anonymous
+请求方式：POST
+
 | 参数 | 参数说明 | 类型 | 备注 | 参考 |
 | --- |:-------:|:----:|:---:|:----:|
 |guestinfo|客户端信息|String|必须，主机名、系统类型、系统架构、操作系统版本号，以上信息均以半角括号括起，然后将其连接起来|os.hostname() os.type() os.arch() os.release()|
@@ -75,6 +78,7 @@ salt待定
 | --- |:-------:|:----:|:---:|:----:|
 |user|用户名|String|
 |passwd|密码|String|发送的是经过sha1加密的密码|
+|guestinfo|客户端信息|String|必须，主机名、系统类型、系统架构、操作系统版本号，以上信息均以半角括号括起，然后将其连接起来|os.hostname() os.type() os.arch() os.release()|
 |check|验证码|String|
 
 ###返回值
