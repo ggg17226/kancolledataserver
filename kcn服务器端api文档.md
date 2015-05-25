@@ -6,7 +6,7 @@
 
 ##关于接口url
 
-接口url将在上线后给出
+接口基础url为http://api.aghost.cn/
 
 ---------------------------------
 
@@ -52,8 +52,8 @@
 
 ##获取验证码
 
-地址：/index.php/api/user/verifycode
-请求方式：GET
+地址：/api/user/verifycode
+请求方式：GET 可用
 
 ###返回值
 图片
@@ -65,8 +65,8 @@
 
 ##用户注册
 
-地址：/index.php/api/user/reg
-请求方式：POST
+地址：/api/user/reg
+请求方式：POST 可用
 
 | 参数 | 参数说明 | 类型 | 备注 | 参考 |
 | --- |:-------:|:----:|:---:|:----:|
@@ -86,8 +86,8 @@
 
 ##查看用户名是否被占用接口
 
-地址：/index.php/api/user/checkname
-请求方式：GET
+地址：/api/user/checkname
+请求方式：GET 可用
 
 | 参数 | 参数说明 | 类型 | 备注 | 参考 |
 | --- |:-------:|:----:|:---:|:----:|
@@ -103,8 +103,8 @@
 
 ##匿名用户获取授权码（https）
 
-地址：/index.php/api/user/anonymous
-请求方式：POST
+地址：/api/user/anonymous
+请求方式：POST 可用
 
 | 参数 | 参数说明 | 类型 | 备注 | 参考 |
 | --- |:-------:|:----:|:---:|:----:|
@@ -128,8 +128,8 @@ salt待定
 
 ##注册用户获取授权码（https）
 
-地址：/index.php/api/user/login
-请求方式：POST
+地址：/api/user/login
+请求方式：POST 可用
 
 | 参数 | 参数说明 | 类型 | 备注 | 参考 |
 | --- |:-------:|:----:|:---:|:----:|
@@ -154,15 +154,18 @@ salt待定
 ----------
 ##上传掉落信息接口
 
+地址：/api/ship/shipget
+请求方式：POST 可用
+
 | 参数 | 参数说明 | 类型 | 备注 | 参考 |
 | --- |:-------:|:----:|:---:|:----:|
 |code|授权码|String|
-|time|掉落时间|datetime|2015-5-5 00:00:00|
-|place|地图|String|5-4 1-1|
+|time|掉落时间|datetime|2015-5-5 00:00:00|过滤正则^\d{4}-\d{1,2}-\d{1,2} \d{1,2}:\d{1,2}:\d{1,2}$ 以下所有时间都使用此正则|
+|place|地图|String|5-4 1-1|过滤正则^\d{1}-\d{1}$ 以下所有地图都使用此正则|
 |point|掉落点|int|
 |shipid|掉落|int|掉落船id|
 |shiptype|舰船类型|int|
-|rank|战斗评级|String|S A B C D E|
+|rank|战斗评级|String|S A B C D E|过滤用正则^(S|A|B|C|D|E)$|
 
 ###返回值
 
@@ -171,9 +174,12 @@ salt待定
 ----------
 ##获取地图掉落接口
 
+地址：/api/ship/shipget
+请求方式：GET
+
 | 参数 | 参数说明 | 类型 | 备注 | 参考 |
 | --- |:-------:|:----:|:---:|:----:|
-|code|	授权码|	String|	　
+|code|	授权码|	String|	
 |place	|地图|	String|	5-4 1-1|
 
 ###返回值
