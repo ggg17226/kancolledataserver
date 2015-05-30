@@ -353,7 +353,7 @@ salt待定
 |id|  配置id| int|
 
 ----------
-##砸鸡蛋接口
+##取消砸鸡蛋接口
 
 地址：/api/shipconf/dislike
 请求方式：DELETE 可用
